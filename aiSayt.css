@@ -1,17 +1,34 @@
+a:link {
+	text-decoration: none;
+}
+
+body {
+scroll-behavior: auto;
+}
 .background {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -10;
+	
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -10;
 }
 
-html, body {
-	padding: 0;
-	margin: 0;
+.categories{
+	color: #ffffff;
+	position: absolute;
+	left: 16%;
+	font-size: 30px;
 }
 
+.aboutUs {
+	color: #ffffff;
+	position: absolute;
+	left: 28%;
+	font-size: 30px;
+}
+  
 h1 {
 	font-family: Verdana;
 	margin-left: 10%;
