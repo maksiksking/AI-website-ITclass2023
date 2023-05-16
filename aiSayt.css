@@ -1,3 +1,8 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 a:link {
 	text-decoration: none;
 }
@@ -9,11 +14,6 @@ a:link {
   top: 0;
   left: 0;
   z-index: -10;
-}
-
-html, body {
-	padding: 0;
-	margin: 0;
 }
 
 .categories{
@@ -54,3 +54,41 @@ a {
 	height: 6px;
 	background-color: white;
 }
+
+h1 {
+	font-size: 470%;
+	color: white;
+	padding-top: 7%;
+	font-family: 'Verdana';
+	text-align: center
+}
+
+p {
+	font-size: 150%;
+	color: white;
+	padding-left: 30%;
+	padding-right: 30%;
+	font-family: 'Verdana';
+	text-align: center
+}
+
+div {
+	color: #ffffff;
+	padding-left: 57%;
+	font-size: 160%;
+	font-weight: bold;	
+	margin-top: 1%;
+	font-family: 'Verdana';
+}
+
+p1 {
+	writing-mode: vertical-rl;
+    color: #ffffff;
+    font-weight: bold;
+	font-size: 500%;
+	margin-left: 46%;
+	margin-top: 5%;
+	font-family: 'Cuprum';
+	user-select: none;
+}
+
