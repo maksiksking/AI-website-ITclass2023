@@ -38,15 +38,17 @@ a:link {
 }
 
 .categories{
+	z-index: 1000;
 	color: #ffffff;
-	position: absolute;
+	position: fixed;
 	left: 16%;
 	font-size: 30px;
 }
 
 .aboutUs {
+	z-index: 1000;
 	color: #ffffff;
-	position: absolute;
+	position: fixed;
 	left: 28%;
 	font-size: 30px;
 }
@@ -68,6 +70,8 @@ a {
 }
 
 .sqr {
+	z-index: 1000;
+	position: fixed;
 	margin-top: 60px;g
 	margin-right: 0;
 	margin-left: 0;
@@ -79,8 +83,8 @@ a {
 h1 {
 	font-size: 470%;
 	color: white;
-	padding-top: 3%;
-	font-family: 'Noto Sans Display', sans-serif;
+	padding-top: 7%;
+	font-family: 'Verdana';
 	text-align: center
 }
 
@@ -89,7 +93,7 @@ p {
 	color: white;
 	padding-left: 30%;
 	padding-right: 30%;
-	font-family: 'PT Sans Caption', sans-serif;
+	font-family: 'Verdana';
 	text-align: center
 }
 
@@ -103,6 +107,21 @@ div {
 }
 
 .blank {
-	margin-top: 200%;
+	margin-top: 2000px;
 	visibility: hidden;
 }
+
+.button1 {
+	box-sizing: border-box;
+	position: absolute;
+	width: 600px;
+	height: 100px;
+	left: 36%;
+	top: 600px;
+	text-align: center;
+	font-size: 60px;
+	border: 1px solid #000000;
+	box-shadow: 15px 15px 16px rgba(0, 0, 0, 0.25);
+
+}
+
