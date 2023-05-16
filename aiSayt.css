@@ -36,7 +36,8 @@ a:link {
 	z-index: 1000;
 	color: #ffffff;
 	position: fixed;
-	margin-top: 2%;
+	margin-top: 1.2%;
+	font-family: 'Verdana';
 	left: 1%;
 	font-size: 120%;
 }
@@ -45,7 +46,8 @@ a:link {
 	z-index: 1000;
 	color: #ffffff;
 	position: fixed;
-	margin-top: 2%;
+	margin-top: 1.2%;
+	font-family: 'Verdana';
 	left: 8%;
 	font-size: 120%;
 }
@@ -69,7 +71,7 @@ a {
 .sqr {
 	z-index: 1000;
 	position: fixed;
-	margin-top: 60px;g
+	margin-top: 3.5%;g
 	margin-right: 0;
 	margin-left: 0;
 	width: 100%;
@@ -78,15 +80,15 @@ a {
 }
 
 h1 {
-	font-size: 470%;
+	font-size: 700%;
 	color: white;
-	padding-top: 3%;
+	padding-top: 10%;
 	font-family: 'Noto Sans Display', sans-serif;
 	text-align: center
 }
 
-p {
-	font-size: 150%;
+.quoteText {
+	font-size: 200%;
 	color: white;
 	padding-left: 30%;
 	padding-right: 30%;
@@ -94,7 +96,7 @@ p {
 	text-align: center
 }
 
-div {
+.qot {
 	color: #ffffff;
 	padding-left: 57%;
 	font-size: 160%;
@@ -109,14 +111,17 @@ div {
 }
 
 .button1 {
+	-webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 	box-sizing: border-box;
 	position: absolute;
-	width: 600px;
-	height: 100px;
-	left: 36%;
-	top: 600px;
+	width: 24%;
+	height: 8%;
+	left: 50%;
+	top: 80%;
 	text-align: center;
-	font-size: 60px;
+	font-family: 'Noto Sans Display';
+	font-size: 250%;
 	border: 1px solid #000000;
-	box-shadow: 15px 15px 16px rgba(0, 0, 0, 0.25);
+	box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.25);
 }
