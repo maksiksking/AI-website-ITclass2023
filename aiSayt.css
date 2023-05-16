@@ -118,3 +118,7 @@ p1 {
 	user-select: none;
 }
 
+.blank {
+	margin-top: 200%;
+	visibility: hidden;
+}
