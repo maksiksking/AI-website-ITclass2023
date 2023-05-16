@@ -40,15 +40,17 @@ a:link {
 .categories{
 	color: #ffffff;
 	position: absolute;
-	left: 16%;
-	font-size: 30px;
+	margin-top: 2%;
+	left: 1%;
+	font-size: 120%;
 }
 
 .aboutUs {
 	color: #ffffff;
 	position: absolute;
-	left: 28%;
-	font-size: 30px;
+	margin-top: 2%;
+	left: 8%;
+	font-size: 120%;
 }
 
 ul {
@@ -59,7 +61,7 @@ ul {
 }
 
 li {
-	float: left;
+	float: left; 
 }
 
 a {
