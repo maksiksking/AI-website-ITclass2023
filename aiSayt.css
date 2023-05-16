@@ -19,11 +19,6 @@
   background: #555;
 }
 
-p99 {
-	margin-top: 2160px;
-	visibility: hidden;
-}
-
 html, body {
 	padding: 0;
 	margin: 0;
@@ -84,8 +79,8 @@ a {
 h1 {
 	font-size: 470%;
 	color: white;
-	padding-top: 7%;
-	font-family: 'Verdana';
+	padding-top: 3%;
+	font-family: 'Noto Sans Display', sans-serif;
 	text-align: center
 }
 
@@ -94,7 +89,7 @@ p {
 	color: white;
 	padding-left: 30%;
 	padding-right: 30%;
-	font-family: 'Verdana';
+	font-family: 'PT Sans Caption', sans-serif;
 	text-align: center
 }
 
@@ -105,17 +100,6 @@ div {
 	font-weight: bold;	
 	margin-top: 1%;
 	font-family: 'Verdana';
-}
-
-p1 {
-	writing-mode: vertical-rl;
-    color: #ffffff;
-    font-weight: bold;
-	font-size: 500%;
-	margin-left: 46%;
-	margin-top: 5%;
-	font-family: 'Cuprum';
-	user-select: none;
 }
 
 .blank {
