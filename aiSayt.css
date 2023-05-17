@@ -105,12 +105,8 @@ h1 {
 	font-family: 'Verdana';
 }
 
-.blank {
-	margin-top: 200%;
-	visibility: hidden;
-}
-
 .button1 {
+	z-index: 100;
 	-webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
 	box-sizing: border-box;
@@ -125,3 +121,109 @@ h1 {
 	border: 1px solid #000000;
 	box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.25);
 }
+
+.button1:hover {
+	background-color: #D7D7D7;
+}
+
+/* ChatGPT зробив цей код, аккуратно */
+
+.gallery {
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin-left: 64.5%;
+  position: relative;
+  max-width: 800px;
+  margin-top: 750px;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.gallery-images {
+  display: flex;
+  transition: transform 0.3s ease;
+  height: 400px;
+}
+
+.gallery-image {
+  flex: 0 0 100%;
+  overflow: hidden;
+}
+
+.gallery-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image.prev img {
+  transform: scale(0.8);
+}
+
+.gallery-image.next img {
+  transform: scale(0.8);
+}
+
+.gallery-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.control-button {
+	user-select: none;
+	margin-top: 2200px;
+  background: none;
+  border: none;
+  font-size: 240px;
+  font-family: cuprum;
+  cursor: pointer;
+}
+
+.control-button:hover {
+  color: #666;
+}
+
+.control-button:active {
+  transform: translateY(2px);
+}
+
+.prev-button {
+  left: 20px;
+}
+
+.next-button {
+  right: 20px;
+}
+
+/* V Лишив пока пікселі бо пока хай так буде -M */
+
+#prev-button {
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin-left: 642px;
+  z-index: 2;
+}
+
+#next-button {
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin-left: 490px;
+  z-index: 2;
+}
+
+/* ChatGPT-шний код -М*/
+
+.rct {
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin-left: 50%;
+  opacity: 37%;
+  height: 562px;
+  width: 427px;
+  background-color: #555;
+
+}
+/* ^ Лишив пока пікселі бо пока хай так буде -M */
