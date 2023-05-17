@@ -231,7 +231,7 @@ h1 {
 .footer {
 	z-index: 1000;
 	position: absolute;
-	margin-top: 2450px;
+	margin-top: -157px;
 	width: 100%;
 	height: 6px;
 	background-color: white;
@@ -253,9 +253,9 @@ h1 {
 }
 
 .hto {
+	margin-top: -150px;
 	padding-left: 4%;
 	color: #ffffff;
-	margin-top: 2470px;
 	font-family: 'Verdana';
 }
 
