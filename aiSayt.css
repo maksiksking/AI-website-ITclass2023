@@ -52,14 +52,14 @@ a:link {
 	font-size: 120%;
 }
 
-ul {
+.vitalik1 {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
     overflow: hidden;
 }
 
-li {
+.shapka {
 	float: left;
 }
 
@@ -227,3 +227,42 @@ h1 {
 
 }
 /* ^ Лишив пока пікселі бо пока хай так буде -M */
+
+.footer {
+	z-index: 1000;
+	position: absolute;
+	margin-top: 2450px;
+	width: 100%;
+	height: 6px;
+	background-color: white;
+
+
+}
+
+.zvazok {
+  overflow: hidden;
+  font-size: 120%;
+  margin-left: 5%;
+}
+
+.comanda {
+	overflow: hidden;
+	font-size: 120%;
+	float: left;
+	padding-right: 2.5%;
+}
+
+.hto {
+	padding-left: 4%;
+	color: #ffffff;
+	margin-top: 2470px;
+	font-family: 'Verdana';
+}
+
+.maks {
+	float: left;
+}
+
+.pochta {
+	margin-left: 9.5%;
+}
