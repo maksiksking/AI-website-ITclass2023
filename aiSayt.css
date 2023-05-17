@@ -36,8 +36,7 @@ a:link {
 	z-index: 1000;
 	color: #ffffff;
 	position: fixed;
-	margin-top: 1.2%;
-	font-family: 'Verdana';
+	margin-top: 2%;
 	left: 1%;
 	font-size: 120%;
 }
@@ -46,20 +45,19 @@ a:link {
 	z-index: 1000;
 	color: #ffffff;
 	position: fixed;
-	margin-top: 1.2%;
-	font-family: 'Verdana';
+	margin-top: 2%;
 	left: 8%;
 	font-size: 120%;
 }
 
-ul {
+.vitalik1 {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
     overflow: hidden;
 }
 
-li {
+.shapka {
 	float: left;
 }
 
@@ -71,24 +69,22 @@ a {
 .sqr {
 	z-index: 1000;
 	position: fixed;
-	margin-top: 3.5%;g
-	margin-right: 0;
-	margin-left: 0;
+	margin-top: 60px;
 	width: 100%;
 	height: 6px;
 	background-color: white;
 }
 
 h1 {
-	font-size: 700%;
+	font-size: 470%;
 	color: white;
-	padding-top: 10%;
+	padding-top: 3%;
 	font-family: 'Noto Sans Display', sans-serif;
 	text-align: center
 }
 
-.quoteText {
-	font-size: 200%;
+p {
+	font-size: 150%;
 	color: white;
 	padding-left: 30%;
 	padding-right: 30%;
@@ -96,7 +92,7 @@ h1 {
 	text-align: center
 }
 
-.qot {
+div {
 	color: #ffffff;
 	padding-left: 57%;
 	font-size: 160%;
@@ -105,23 +101,54 @@ h1 {
 	font-family: 'Verdana';
 }
 
-.blank {
-	margin-top: 200%;
-	visibility: hidden;
-}
-
 .button1 {
-	-webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
 	box-sizing: border-box;
 	position: absolute;
-	width: 24%;
-	height: 8%;
-	left: 50%;
-	top: 80%;
+	width: 600px;
+	height: 100px;
+	left: 36%;
+	top: 600px;
 	text-align: center;
-	font-family: 'Noto Sans Display';
-	font-size: 250%;
+	font-size: 60px;
 	border: 1px solid #000000;
-	box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.25);
+	box-shadow: 15px 15px 16px rgba(0, 0, 0, 0.25);
+}
+
+.footer {
+	z-index: 1000;
+	position: absolute;
+	margin-top: 2450px;
+	width: 100%;
+	height: 6px;
+	background-color: white;
+	
+
+}
+
+.zvazok {
+  overflow: hidden;
+  font-size: 120%;
+  margin-left: 5%;
+}
+
+.comanda {
+	overflow: hidden;
+	font-size: 120%;
+	float: left;
+	padding-right: 2.5%;
+}
+
+.hto {
+	padding-left: 4%;
+	color: #ffffff;
+	margin-top: 2470px;
+	font-family: 'Verdana';
+}
+
+.maks {
+	float: left;
+}
+
+.pochta {
+	margin-left: 9.5%;
 }
