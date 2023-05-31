@@ -24,7 +24,7 @@ a:link {
 }
 
 .background {
-    user-select: none;
+	user-select: none;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -48,7 +48,7 @@ a:link {
 	color: #ffffff;
 	position: fixed;
 	margin-top: 1.2%;
-	font-family: 'Verdana';
+	font-family: 'Verdana', serif;
 	left: 8%;
 	font-size: 120%;
 }
@@ -108,7 +108,7 @@ h1 {
 
 .button1 {
 	z-index: 100;
-	transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 	box-sizing: border-box;
 	position: absolute;
 	width: 24%;
@@ -164,20 +164,20 @@ h1 {
 }
 
 .gallery-controls {
-  user-select: none;
-  position: absolute;
-  top: 304px;
-  transform: translateY(-50%);
-  z-index: 4;
+	user-select: none;
+    position: absolute;
+    top: 304px;
+    transform: translateY(-50%);
+    z-index: 4;
 }
 
 .control-button {
-  position: absolute;
-  user-select: none;
-  margin-top: 1110px;
-  background: none;
-  border: none;
-  cursor: pointer;
+    position: absolute;
+	user-select: none;
+	margin-top: 1110px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .control-button:hover {
@@ -187,27 +187,27 @@ h1 {
 /* V Лишив пока пікселі бо пока хай так буде -M */
 
 #prev-button {
-  left: 620px;
-  z-index: 6;
+    left: 620px;
+    z-index: 6;
 }
 
 #next-button {
-  left: 1218px;
-  z-index: 5;
+    left: 1218px;
+    z-index: 5;
 }
 
 /* ChatGPT-шний код -М*/
 
 #mainRct {
-  position: absolute;
-  top: 1475px;
-  transform: translate(-50%,-50%);
-  margin-left: 50%;
-  opacity: 37%;
-  height: 562px;
-  width: 427px;
-  background-color: #353535;
-  z-index: 1;
+	position: absolute;
+	top: 1475px;
+    transform: translate(-50%,-50%);
+    margin-left: 50%;
+    opacity: 37%;
+    height: 562px;
+    width: 427px;
+    background-color: #353535;
+    z-index: 1;
 }
 
 .rct:hover {
@@ -223,8 +223,6 @@ h1 {
 	width: 100%;
 	height: 6px;
 	background-color: white;
-
-
 }
 
 .zvazok {
