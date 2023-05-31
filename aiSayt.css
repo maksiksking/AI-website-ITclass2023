@@ -24,12 +24,13 @@ a:link {
 }
 
 .background {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -10;
+	user-select: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
 }
 
 .categories {
@@ -37,7 +38,7 @@ a:link {
 	color: #ffffff;
 	position: fixed;
 	margin-top: 1.2%;
-	font-family: 'Verdana';
+	font-family: 'Verdana', serif;
 	left: 1%;
 	font-size: 120%;
 }
@@ -47,7 +48,7 @@ a:link {
 	color: #ffffff;
 	position: fixed;
 	margin-top: 1.2%;
-	font-family: 'Verdana';
+	font-family: 'Verdana', serif;
 	left: 8%;
 	font-size: 120%;
 }
@@ -71,7 +72,7 @@ a {
 .sqr {
 	z-index: 1000;
 	position: fixed;
-	margin-top: 3.5%;g
+	margin-top: 3.5%;
 	margin-right: 0;
 	margin-left: 0;
 	width: 100%;
@@ -102,13 +103,12 @@ h1 {
 	font-size: 160%;
 	font-weight: bold;	
 	margin-top: 1%;
-	font-family: 'Verdana';
+	font-family: 'Verdana', serif;
 }
 
 .button1 {
 	z-index: 100;
-	-webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 	box-sizing: border-box;
 	position: absolute;
 	width: 24%;
@@ -116,7 +116,7 @@ h1 {
 	left: 50%;
 	top: 80%;
 	text-align: center;
-	font-family: 'Noto Sans Display';
+	font-family: 'Noto Sans Display', serif;
 	font-size: 250%;
 	border: 1px solid #000000;
 	box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.25);
@@ -129,11 +129,9 @@ h1 {
 /* ChatGPT зробив цей код, аккуратно */
 
 .gallery {
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  margin-left: 64.5%;
+  display: flex;
+  justify-content: center;
   position: relative;
-  max-width: 800px;
   margin-top: 750px;
   overflow: hidden;
   z-index: 4;
@@ -157,7 +155,7 @@ h1 {
   transition: transform 0.3s ease;
 }
 
-.gallery-image.prev img {
+.gallery-image.v img {
   transform: scale(0.8);
 }
 
@@ -166,77 +164,65 @@ h1 {
 }
 
 .gallery-controls {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
+	user-select: none;
+    position: absolute;
+    top: 304px;
+    transform: translateY(-50%);
+    z-index: 4;
 }
 
 .control-button {
+    position: absolute;
 	user-select: none;
-	margin-top: 2200px;
-  background: none;
-  border: none;
-  font-size: 240px;
-  font-family: cuprum;
-  cursor: pointer;
+	margin-top: 1110px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .control-button:hover {
   color: #666;
 }
 
-.control-button:active {
-  transform: translateY(2px);
-}
-
-.prev-button {
-  left: 20px;
-}
-
-.next-button {
-  right: 20px;
-}
-
 /* V Лишив пока пікселі бо пока хай так буде -M */
 
 #prev-button {
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  margin-left: 642px;
-  z-index: 2;
+    left: 620px;
+    z-index: 6;
 }
 
 #next-button {
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  margin-left: 490px;
-  z-index: 2;
+    left: 1218px;
+    z-index: 5;
 }
 
 /* ChatGPT-шний код -М*/
 
-.rct {
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  margin-left: 50%;
-  opacity: 37%;
-  height: 562px;
-  width: 427px;
-  background-color: #555;
-
+#mainRct {
+	position: absolute;
+	top: 1475px;
+    transform: translate(-50%,-50%);
+    margin-left: 50%;
+    opacity: 37%;
+    height: 562px;
+    width: 427px;
+    background-color: #353535;
+    z-index: 1;
 }
+
+.rct:hover {
+    opacity: 70%;
+}
+
 /* ^ Лишив пока пікселі бо пока хай так буде -M */
 
 .footer {
 	z-index: 1000;
 	position: absolute;
-	margin-top: -157px;
+	margin-top: 400px;
 	width: 100%;
 	height: 6px;
 	background-color: white;
-
-
 }
 
 .zvazok {
@@ -253,10 +239,10 @@ h1 {
 }
 
 .hto {
-	margin-top: -150px;
+	margin-top: 405px;
 	padding-left: 4%;
 	color: #ffffff;
-	font-family: 'Verdana';
+	font-family: 'Verdana', serif;
 }
 
 .maks {
@@ -265,4 +251,146 @@ h1 {
 
 .pochta {
 	margin-left: 9.5%;
+}
+
+#current-image {
+    animation-name: rainbow;
+    animation-duration: 10s;
+	animation-play-state: paused;
+    user-select: none;
+}
+
+@keyframes rainbow {
+    10% {background-color: yellow}
+    30% {background-color: purple}
+    50% {background-color: red}
+    70% {background-color: blue}
+    90% {background-color: green}
+}
+
+@keyframes moovinL {
+	from {
+		top: 1195px;
+		margin-left: 127px;
+		transform: scale(80%);
+		}
+	to {
+		top: 1475px;
+		transform: translate(-50%,-50%);
+		scale(100%);
+		margin-left: 50%;
+		}
+}
+
+@keyframes rctMoovinL {
+	from {
+		top: 1475px;
+		transform: translate(-50%,-50%);
+		margin-left: 50%;
+	}
+	to {
+		top: 1195px;
+		transform: scale(80%);
+	translate(-7%,-7%);
+		margin-left: 1395px;
+	}
+}
+
+
+@keyframes moovinR {
+	from {
+		top: 1195px;
+		margin-left: 1395px;
+		transform: scale(80%);
+	}
+	to {
+		top: 1475px;
+		transform: translate(-50%,-50%);
+		scale(100%);
+		margin-left: 50%;
+	}
+}
+
+@keyframes rctMoovinR {
+	from {
+		top: 1475px;
+		transform: translate(-50%,-50%);
+		margin-left: 50%;
+	}
+	to {
+		top: 1195px;
+		transform: scale(80%);
+	translate(-7%,-7%);
+		margin-left: 127px;
+	}
+}
+
+.active {
+	animation-play-state: running;
+}
+
+.rct1 {
+	animation-name: moovinL;
+	animation-duration: 0.75s;
+	animation-direction: normal;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+}
+
+#rect1 {
+	top: 1193px;
+	opacity: 37%;
+	height: 562px;
+	width: 427px;
+	transform: scale(80%);
+	margin-left: 127px;
+	background-color: #353535;
+	z-index: 2;
+	position: absolute;
+}
+
+.active2 {
+	animation-play-state: running;
+}
+
+.rct2 {
+	animation: moovinR 0.75s normal paused forwards;
+}
+
+#rect2 {
+	transform: scale(80%);
+	top: 1193px;
+	bottom: 845px;
+	opacity: 37%;
+	height: 562px;
+	width: 427px;
+	margin-left: 1395px;
+	background-color: #353535;
+	z-index: 2;
+	position: absolute;
+}
+
+.activeMain {
+	animation-play-state: running;
+}
+
+.activeMainR {
+	animation-play-state: running;
+}
+
+
+.rctL {
+	animation-name: rctMoovinL;
+	animation-duration: 0.75s;
+	animation-direction: normal;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+}
+
+.rctR {
+	animation-name: rctMoovinR;
+	animation-duration: 0.75s;
+	animation-direction: normal;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
 }

@@ -1,74 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
-	<script type="text/javascript" src="scrip.js"></script>
-	<link rel="stylesheet" href="aiSayt.css">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Головна</title>
-		<!--ПЕРШИЙ ШРИФТ-->
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="scrip.js"></script>
+    <link rel="stylesheet" href="aiSayt.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Головна</title>
+    <!--ПЕРШИЙ ШРИФТ-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@500&display=swap" rel="stylesheet">
     <!--ДРУГИЙ ШРИФТ-->
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
 
 </head>
 <body>
-	<img src="image/bgp.webp" class="background">
- <ul class="vitalik1">
-	<li class="shapka"><a href="cat/cat.html" class="categories">Категорії</a></li>
-	<li class="shapka"><a href="aboutUs/aboutUs.html" class="aboutUs">Про нас</a></li>
-	<div class="sqr"></div>
+<img src="image/bgp.webp" class="background" alt="оні щось пішло дуже сильно не так">
+<ul class="vitalik1">
+    <li class="shapka"><a href="cat/cat.html" class="categories">Категорії</a></li>
+    <li class="shapka"><a href="aboutUs/aboutUs.html" class="aboutUs">Про нас</a></li>
 </ul>
+
+<div class="sqr"></div>
+
 <h1>ШІ</h1>
-	<p class="quoteText">“За допомогою штучного інтелекту можна аналізувати складні дані, передбачати 
- тренди, обробляти зображення, виконувати текстові  завдання, оптимізувати процеси та автоматизувати рутинні завдання.”</p>
-    <div class="qot">-   Мовна модель ChatGPT</div>
+<p class="quoteText">“За допомогою штучного інтелекту можна аналізувати складні дані, передбачати
+    тренди, обробляти зображення, виконувати текстові завдання, оптимізувати процеси та автоматизувати рутинні
+    завдання.”</p>
+<div class="qot">- Мовна модель ChatGPT</div>
 
-	<div>
+<div>
 
-		<button onclick="scrollToBottom()" class="button1">Натисни мене!</button>
+    <button onclick="scrollToBottom()" class="button1">Натисни мене!</button>
 
-		<script>
+    <script>
 			function scrollToBottom() {
 				window.scrollTo({
 					top: document.documentElement.scrollHeight,
 					behavior: 'smooth'
 				});
 			}
-		</script>
 
-	</div>
+    </script>
+
+</div>
 
 <!--Моя прелесть не трож - M -->
 
 <div class="gallery">
-  <img id="current-image" src="image/images.png" alt="Current Image" />
+    <img id="current-image" src="image/images.png" alt="Current Image"/>
 </div>
 <div class="gallery-controls">
-    <button id="prev-button" class="control-button prev-button">&lt;</button>
-    <button id="next-button" class="control-button next-button">&gt;</button>
-  </div>
-  <div class="rct"></div>
+    <button id="prev-button" class="control-button prev-button"><img src="image/ArrowL.svg" alt="Уяви, що я стрілка"></button>
+    <button id="next-button" class="control-button next-button"><img src="image/ArrowR.svg" alt="Уяви, що я стрілка"></button>
+</div>
+
+<div class="rct activeMain" id ="mainRct"></div>
+<div class="rct1 active" id="rect1"></div>
+<div class="rct2 active2" id="rect2"></div>
 
 <!-- Моя прелесть не трож - M-->
 
-	<footer class="footer"></footer>
+<footer class="footer"></footer>
 
-	<ul class="hto">
-		<li class="comanda">Команда</li>
-		<li class="zvazok">Зв'язок</li>
-		<li class="maks">Maksiks</li>
-		<li class="pochta">maksiksking1@gmail.com</li>
-		<li class="concretno">Vitalik</li>
-		<li class="concretno">vlyd</li>
-		<li class="concretno">Blissok</li>
-		<li class="concretno">Umka</li>
-	</ul>
-
+<ul class="hto">
+    <li class="comanda">Команда</li>
+    <li class="zvazok">Зв'язок</li>
+    <li class="maks">Maksiks</li>
+    <li class="pochta">maksiksking1@gmail.com</li>
+    <li class="concretno">Vitalik</li>
+    <li class="concretno">vlyd</li>
+    <li class="concretno">Blissok</li>
+    <li class="concretno">Umka</li>
+</ul>
 
 </body>
 </html>
