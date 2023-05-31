@@ -1,0 +1,190 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a {
+	display: block;
+	padding: 10px;
+}
+
+.background {
+    
+    width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -10;
+}
+
+.categories {
+	z-index: 1000;
+	color: #ffffff;
+	position: fixed;
+	margin-top: 1.2%;
+	font-family: 'Verdana';
+	left: 1%;
+	font-size: 120%;
+}
+
+.aboutUs {
+	z-index: 1000;
+	color: #ffffff;
+	position: fixed;
+	margin-top: 1.2%;
+	font-family: 'Verdana';
+	left: 8%;
+	font-size: 120%;
+}
+
+.Menu1 {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+    overflow: hidden;
+}
+
+.head1 {
+	float: left;
+}
+
+.sqr {
+	z-index: 1000;
+	position: fixed;
+	margin-top: 3.5%;
+	margin-right: 0;
+	margin-left: 0;
+	width: 100%;
+	height: 6px;
+	background-color: white;
+}
+
+.background123{
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 58px;
+    top: 170px;
+    background: rgba(0, 0, 0, 0.37);
+    border-radius: 5px;
+}
+
+.TagText {
+    float: left;
+    margin-left: 25px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.TagVideo {
+    float: left;
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.TagImage {
+    float: left;
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.TagVoice {
+    float: left;
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.Tagitc {
+    float: left;
+    margin-left: 50px;
+    margin-right: 25px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.tablee {
+	text-align: center;
+	color: #ffffff;
+	font-size: 28px;
+	border-radius: 8px;
+	padding: 10px;
+
+}
+
+.tds {
+	border: 5px solid rgba(0, 0, 0, 0);;
+	background: rgba(0, 0, 0, 0.37);
+	height: 85px;
+}
+
+.column1, .column2, .column3, .column4, .column5{
+	width: 160px;
+	padding: 5px;
+}
+
+.background2 {
+	position: absolute;
+    width: 750px;
+    height: 546.2px;
+	left: 960px;
+	top: 170px;
+    background: rgba(0, 0, 0, 0.37);
+    border-radius: 5px;
+}
+/*  Зразок випливаючого фото    */  
+.container1 {
+		position: relative;
+	}
+	
+.textxx {
+		display: inline;
+		color: #ffffff/* Стилі для тексту */
+}
+
+
+.infoChatGPT{
+	color: #ffffff/* Стилі для тексту */
+}
+
+.imagess1 {
+	position: absolute;
+	top: 50px; /* Змініть значення, щоб встановити бажану вертикальну позицію */
+	left: 960px; /* Змініть значення, щоб встановити бажану горизонтальну позицію */
+	opacity: 0; /* Початково фотографія прихована */
+	transition: opacity 0.4s ease; /* Плавна анімація */
+	z-index: 100;
+	width: 600px;
+}
+	
+.textxx:hover + .imagess1   {
+	opacity: 1; /* Показати фотографію при наведенні на текст */
+}
