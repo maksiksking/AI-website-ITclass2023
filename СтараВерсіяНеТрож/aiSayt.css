@@ -505,20 +505,10 @@ h1 {
     animation-play-state: paused;
 }
 
-.cc {
-    display: none;
+.fontJoyReal {
+    visibility: hidden;
 }
 
-.txt {
-    font-size: 32px;
-    text-align: center;
-}
-
-.povistka {
-    position: absolute;
-    top: 1920px;
-    left: 1860px;
-    font-family: Verdana;
-    color: rgba(194, 235, 255);
-    opacity: 3%;
+.fontJoyTxtReal {
+    visibility: hidden;
 }

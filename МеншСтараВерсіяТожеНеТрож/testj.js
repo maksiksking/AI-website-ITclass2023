@@ -6,13 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let rqt2 = document.getElementsByClassName("rectR")[currentRightRqtIndex];
     let currentMainRqt = document.getElementsByClassName("mainRct")[currentMainRqtIndex];
 
-    let cTxt1 = document.getElementsByClassName("cc")[0];
-    let cTxt2 = document.getElementsByClassName("cc")[1];
-
     let fakeRqt = document.getElementsByClassName("fakeRectL")[0];
     let fakeRqt2 = document.getElementsByClassName("fakeRectR")[0];
 
-    let currentImage = document.getElementsByClassName("current-image")[0];
+    const currentImage = document.getElementById("current-image");
     const prevButton = document.getElementById("prev-button");
     const nextButton = document.getElementById("next-button");
     const scaleAnim = [
@@ -28,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         iterations: 1,
         fill: "forwards",
     };
-
+    const ctrTxt = document.getElementsByClassName("ctrText")[0];
     let rectag = currentImage.getBoundingClientRect();
     let elemTop = rectag.top;
     let elemBottom = rectag.bottom;
@@ -53,6 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let q2 = true;
     let j2 = true;
     let o2 = 0;
+
+    // function updateCurrentImage() {
+    //     // currentImage.src = images[currentImageIndex];
+    // }
 
     function redeclareSqr() {
         onOffPass = false;
@@ -79,6 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         rqt2 = currentMainRqt;
 
+        // if (o === 1) {
+        //     rqt2 = currentMainRqt
+        // }
+
+        // шось не так в цій зоні
 
         rqt2.classList.add("rct2");
         rqt2.classList.add("active2");
@@ -136,6 +142,12 @@ document.addEventListener("DOMContentLoaded", function () {
         rqt2.classList.remove("rctL");
 
         rqt = currentMainRqt;
+
+        // if (o === 1) {
+        //     rqt2 = currentMainRqt
+        // }
+
+        // шось не так в цій зоні
 
         rqt.classList.add("rct1");
         rqt.classList.add("active");
@@ -197,15 +209,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    prevButton.addEventListener("click", prevButtonClick);
+    nextButton.addEventListener("click", nextButtonClick);
+
     // Лівий прямокутник
 
     function animStart() {
-        cTxt1.classList.remove("cc")
-
         rqt.classList.remove("fakeAnimL")
         rqt.classList.remove("fakeAnimActive")
         rqt2.classList.remove("fakeAnimR")
         rqt2.classList.remove("fakeAnimActiveR")
+
         rqt.classList.remove("active");
         rqt.classList.remove("rct1");
 
@@ -216,6 +230,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         rqt.style.animationPlayState = "running";
         rqt.style.animationDirection = "normal";
+
+        ctrTxt.classList.remove("ctrActive");
+        ctrTxt.classList.remove("centerText");
+
+        void ctrTxt.offsetWidth;
+
+        ctrTxt.classList.add("ctrActive");
+        ctrTxt.classList.add("centerText");
+
+        ctrTxt.style.animationPlayState = "running";
+        ctrTxt.style.animationDirection = "normal";
 
         rqt2.animate(scaleAnim, scaleAnimTiming);
 
@@ -239,6 +264,20 @@ document.addEventListener("DOMContentLoaded", function () {
             rqt.classList.add("rct1");
 
             rqt.style.animationDirection = "reverse";
+
+            ctrTxt.classList.remove("ctrActive");
+            ctrTxt.classList.remove("centerText");
+
+            void ctrTxt.offsetWidth;
+
+            ctrTxt.classList.add("ctrActive");
+            ctrTxt.classList.add("centerText");
+
+            if (onOffPass === false) {
+                ctrTxt.style.animationDirection = "reverse";
+            } else {
+                console.log("blank")
+            }
 
             fakeRqt.animate(scaleAnim, scaleAnimTiming);
 
@@ -316,8 +355,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Правий прямокутник
 
     function animStart2() {
-        cTxt2.classList.remove("cc")
-
         rqt2.classList.remove("fakeAnimR")
         rqt2.classList.remove("fakeAnimActiveR")
         rqt.classList.remove("fakeAnim")
@@ -333,6 +370,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         rqt2.style.animationPlayState = "running";
         rqt2.style.animationDirection = "normal";
+
+        ctrTxt.classList.remove("ctrActive");
+        ctrTxt.classList.remove("centerText");
+
+        void ctrTxt.offsetWidth;
+
+        ctrTxt.classList.add("ctrActive");
+        ctrTxt.classList.add("centerText");
+
+        ctrTxt.style.animationPlayState = "running";
+        ctrTxt.style.animationDirection = "normal";
 
         rqt.animate(scaleAnim, scaleAnimTiming);
 
@@ -382,6 +430,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
             rqt2.style.animationDirection = "reverse";
 
+            ctrTxt.classList.remove("ctrActive");
+            ctrTxt.classList.remove("centerText");
+
+            void ctrTxt.offsetWidth;
+
+            ctrTxt.classList.add("ctrActive");
+            ctrTxt.classList.add("centerText");
+
+            if (onOffPass2 === false) {
+                ctrTxt.style.animationDirection = "reverse";
+            } else {
+                console.log("blank")
+            }
+
             fakeRqt2.animate(scaleAnim, scaleAnimTiming);
 
             setTimeout(() => {
@@ -423,6 +485,9 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(currentMainRqt);
             console.log("///hfgfgf");
 
+            // rqt2.style.animationPlayState = "paused";
+            // currentMainRqt.style.animationPlayState = "paused";
+
             y2 = false;
             z2 = false;
             q2 = false;
@@ -433,7 +498,83 @@ document.addEventListener("DOMContentLoaded", function () {
             o2++
 
             redeclareSqrR()
+
+            // currentLeftRqtIndex++
+            // currentMainRqtIndex++
+            //
+            // fakeRqt.classList.remove("rectL")
+            //
+            // console.log("///");
+            // console.log(rqt);
+            // console.log("///");
+            //
+            // rqt.classList.remove("rct1");
+            // rqt.classList.remove("active");
+            // rqt.classList.remove("rectL");
+            //
+            // rqt.classList.add("activeMain");
+            // rqt.classList.add("mainRct");
+            // rqt.classList.add("rctL");
+            // rqt.classList.add("rctR");
+            //
+            // console.log("///2412422424242");
+            // console.log(currentMainRqt);
+            // console.log("///");
+            //
+            // currentMainRqt.classList.remove("activeMain");
+            // currentMainRqt.classList.remove("rctL");
+            // currentMainRqt.classList.remove("rctR");
+            // currentMainRqt.classList.remove("mainRct");
+            //
+            // currentMainRqt.classList.add("active2");
+            // currentMainRqt.classList.add("rct2");
+            // currentMainRqt.classList.add("rectR");
+            //
+            // rqt2.classList.remove("rct2");
+            // rqt2.classList.remove("active2");
+            // rqt2.classList.remove("rectR");
+            //
+            // console.log("///24124");
+            // console.log(currentMainRqt);
+            // console.log("///");
+            //
+            // rqt.style.animationPlayState = "paused";
+            // // currentMainRqt.style.animationPlayState = "paused";
+            //
+            // y = false;
+            // z = false;
+            // q = false;
+            // j = false;
+            //
+            // onOffPass = false;
+            //
+            // o++
+            //
+            // redeclareSqr()
         }
+        // rqt2.classList.remove("active2");
+        // rqt2.classList.remove("rct2");
+        //
+        // void rqt2.offsetWidth;
+        //
+        // rqt2.classList.add("active2");
+        // rqt2.classList.add("rct2");
+        //
+        // rqt2.style.animationDirection = "reverse";
+        //
+        // ctrTxt.classList.remove("ctrActive");
+        // ctrTxt.classList.remove("centerText");
+        //
+        // void ctrTxt.offsetWidth;
+        //
+        // ctrTxt.classList.add("ctrActive");
+        // ctrTxt.classList.add("centerText");
+        //
+        // ctrTxt.style.animationDirection = "reverse";
+        //
+        // setTimeout(() => {
+        //     rqt.animate(scaleAnimBack, scaleAnimTiming)
+        // }, 500)
     }
 
     function delayedAnimStart2() {
@@ -544,19 +685,101 @@ document.addEventListener("DOMContentLoaded", function () {
 // ⚠️ Рагульно зроблено але я хз як чинити - М
 
     function isScrolledIntoView() {
+        // Only completely visible elements return true:
         if (elemTop >= 0 && elemBottom <= window.innerHeight) {
             isVisible = true;
         }
 
+        // Partially visible elements return true:
         //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
         if (isVisible === true) {
             setTimeout(() => {
-                currentImage.style.animationPlayState = "paused";
+                currentImage.style.animationPlayState = "running";
             }, 10)
         }
     }
 
 // ⚠️ рагульно зроблено але я хз як чинити - М
-window.addEventListener("scroll", isScrolledIntoView)
+
+    window.addEventListener("scroll", isScrolledIntoView)
+// updateCurrentImage();
+//  function animBack() {
+//     if (onOffPass === false) {
+//         rqt.classList.remove("active");
+//         rqt.classList.remove("rct1");
+//
+//         void rqt.offsetWidth;
+//
+//         rqt.classList.add("active");
+//         rqt.classList.add("rct1");
+//
+//         rqt.style.animationDirection = "reverse";
+//
+//         ctrTxt.classList.remove("ctrActive");
+//         ctrTxt.classList.remove("centerText");
+//
+//         void ctrTxt.offsetWidth;
+//
+//         ctrTxt.classList.add("ctrActive");
+//         ctrTxt.classList.add("centerText");
+//
+//         if (onOffPass === false) {
+//             ctrTxt.style.animationDirection = "reverse";
+//         } else {
+//             console.log("blank")
+//         }
+//
+//         setTimeout(() => {
+//             rqt2.animate(scaleAnimBack, scaleAnimTiming)
+//         }, 500)
+//     } else {
+//         currentMainRqtIndex++
+//         currentLeftRqtIndex++
+//         currentRightRqtIndex++
+//
+//         console.log("///");
+//         console.log(rqt);
+//         console.log("///");
+//
+//         rqt.classList.remove("rct1");
+//         rqt.classList.remove("active");
+//         rqt.classList.remove("rectL");
+//
+//         rqt.classList.add("activeMain");
+//         rqt.classList.add("mainRct");
+//         rqt.classList.add("rctL");
+//         rqt.classList.add("rctR");
+//
+//         currentMainRqt.classList.remove("activeMain");
+//         currentMainRqt.classList.remove("mainRct");
+//         currentMainRqt.classList.remove("rctL");
+//         currentMainRqt.classList.remove("rctR");
+//
+//         currentMainRqt.classList.add("active2");
+//         currentMainRqt.classList.add("rct2");
+//         currentMainRqt.classList.add("rectR");
+//
+//         rqt2.classList.remove("rct2");
+//         rqt2.classList.remove("active2");
+//         rqt2.classList.remove("rectR");
+//
+//         console.log("///");
+//         console.log(currentMainRqt);
+//         console.log("///");
+//
+//         rqt.style.animationPlayState = "paused";
+//         currentMainRqt.style.animationPlayState = "paused";
+//
+//         y = false;
+//         z = false;
+//         q = false;
+//         j = false;
+//
+//         onOffPass = false;
+//
+//         redeclareSqr()
+//     }
+// }
+
 })
 ;

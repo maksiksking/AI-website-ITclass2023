@@ -1,0 +1,33 @@
+body {
+    background-color: #090909;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #090909 19px ), repeating-linear-gradient( #00000055, #000000 );
+}
+
+img {
+    margin-top: 5%;
+    margin-left: 23%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-left: 100px;
+    margin-top: 100px;
+    color: #2e9fa0;
+    font-family: Verdana, serif;
+    opacity: 0%;
+    animation-name: opacit;
+    animation-duration: 10s;
+}
+
+@keyframes opacit {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
