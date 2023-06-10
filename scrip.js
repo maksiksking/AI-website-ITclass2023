@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let fakeRqt = document.getElementsByClassName("fakeRectL")[0];
     let fakeRqt2 = document.getElementsByClassName("fakeRectR")[0];
 
-    let currentImage = document.getElementsByClassName("current-image")[0];
+    const currentImg = document.getElementsByClassName("galleryC")[0];
+    const ctrC = document.getElementById("ctrC");
+
     const prevButton = document.getElementById("prev-button");
     const nextButton = document.getElementById("next-button");
     const scaleAnim = [
@@ -29,173 +31,17 @@ document.addEventListener("DOMContentLoaded", function () {
         fill: "forwards",
     };
 
-    let rectag = currentImage.getBoundingClientRect();
-    let elemTop = rectag.top;
-    let elemBottom = rectag.bottom;
-    let isVisible = false
+    let onOff = true;
 
     let delayTimer;
     let delayTimer2;
     let delayTimerMain;
     let delayTimerMainR;
 
-    let onOffPass = false;
-    let onOffPass2 = false;
-
-    let y = true;
-    let z = true;
-    let q = true;
-    let j = true;
-    let o = 0;
-
-    let y2 = true;
-    let z2 = true;
-    let q2 = true;
-    let j2 = true;
-    let o2 = 0;
-
-    function redeclareSqr() {
-        onOffPass = false;
-
-        if (currentLeftRqtIndex > 3) {
-            currentLeftRqtIndex = 0
-            console.log("bruuh")
-        }
-
-        if (currentRightRqtIndex > 3) {
-            currentRightRqtIndex = 0
-            console.log("bruuhR")
-        }
-
-        rqt = document.getElementsByClassName("rqtId")[currentLeftRqtIndex];
-
-        rqt.classList.add("rct1");
-        rqt.classList.add("active");
-        rqt.classList.add("rectL");
-
-        rqt.classList.remove("activeMain");
-        rqt.classList.remove("rctR");
-        rqt.classList.remove("rctL");
-
-        rqt2 = currentMainRqt;
-
-
-        rqt2.classList.add("rct2");
-        rqt2.classList.add("active2");
-        rqt2.classList.add("rectR");
-
-        rqt2.classList.remove("activeMain");
-        rqt2.classList.remove("mainRct");
-        rqt2.classList.remove("rctR");
-        rqt2.classList.remove("rctL");
-
-        currentMainRqt = document.getElementsByClassName("mainRct")[0];
-
-        rqt2.classList.remove("active2");
-        rqt2.classList.remove("rct2");
-        rqt2.classList.remove("rectR");
-        rqt2.classList.remove("fakeAnimActive");
-        rqt2.classList.remove("fakeAnimL");
-
-        void rqt2.offsetWidth;
-
-        rqt2.classList.add("active2");
-        rqt2.classList.add("rct2");
-        rqt2.classList.add("rectR");
-        rqt2.classList.add("fakeAnimActive");
-        rqt2.classList.add("fakeAnimL");
-
-        rqt2.style.animationPlayState = "paused";
-
-        console.log(currentMainRqt);
-        console.log(rqt2);
-        console.log("yeeeee");
-    }
-
-    function redeclareSqrR() {
-        onOffPass = false;
-
-        if (currentLeftRqtIndex > 3) {
-            currentLeftRqtIndex = 0
-            console.log("bruuh")
-        }
-
-        if (currentRightRqtIndex > 3) {
-            currentRightRqtIndex = 0
-            console.log("bruuhR")
-        }
-
-        rqt2 = document.getElementsByClassName("rqtIdR")[currentRightRqtIndex];
-
-        rqt2.classList.add("rct2");
-        rqt2.classList.add("active2");
-        rqt2.classList.add("rectR");
-
-        rqt2.classList.remove("activeMain");
-        rqt2.classList.remove("rctR");
-        rqt2.classList.remove("rctL");
-
-        rqt = currentMainRqt;
-
-        rqt.classList.add("rct1");
-        rqt.classList.add("active");
-        rqt.classList.add("rectL");
-
-        rqt.classList.remove("activeMain");
-        rqt.classList.remove("mainRct");
-        rqt.classList.remove("rctR");
-        rqt.classList.remove("rctL");
-
-        currentMainRqt = document.getElementsByClassName("mainRct")[0];
-
-        currentMainRqt.classList.remove("activeMain");
-        currentMainRqt.classList.remove("rctR");
-
-        void currentMainRqt.offsetWidth;
-
-        currentMainRqt.classList.add("activeMain");
-        currentMainRqt.classList.add("rctR");
-
-        currentMainRqt.style.animationDirection = "normal"
-        currentMainRqt.style.animationPlayState = "paused"
-
-        rqt.classList.remove("active");
-        rqt.classList.remove("rct1");
-        rqt.classList.remove("rectL");
-        rqt.classList.remove("fakeAnimActiveR");
-        rqt.classList.remove("fakeAnimR");
-
-        void rqt.offsetWidth;
-
-        rqt.classList.add("active");
-        rqt.classList.add("rct1");
-        rqt.classList.add("rectL");
-        rqt.classList.add("fakeAnimActiveR");
-        rqt.classList.add("fakeAnimR");
-
-        rqt.style.animationPlayState = "paused";
-
-        console.log(currentMainRqt);
-        console.log(rqt);
-        console.log("yeeeee");
-    }
-
-    function prevButtonClick() {
-        if (onOffPass2 === false) {
-            onOffPass2 = true;
-        } else {
-            console.log("I am true");
-        }
-    }
-
-    function nextButtonClick() {
-        if (onOffPass === false) {
-            onOffPass = true;
-            // currentLeftRqtIndex = currentLeftRqtIndex++
-        } else {
-            console.log("I am true too");
-        }
-    }
+    let delayTimerD;
+    let delayTimer2D;
+    let delayTimerMainD;
+    let delayTimerMainRD;
 
     // Лівий прямокутник
 
@@ -206,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         rqt.classList.remove("fakeAnimActive")
         rqt2.classList.remove("fakeAnimR")
         rqt2.classList.remove("fakeAnimActiveR")
+
         rqt.classList.remove("active");
         rqt.classList.remove("rct1");
 
@@ -229,88 +76,34 @@ document.addEventListener("DOMContentLoaded", function () {
         rqt2.classList.remove("fakeAnimR")
         rqt2.classList.remove("fakeAnimActiveR")
 
-        if (onOffPass === false) {
-            rqt.classList.remove("active");
-            rqt.classList.remove("rct1");
 
-            void rqt.offsetWidth;
+        rqt.classList.remove("active");
+        rqt.classList.remove("rct1");
 
-            rqt.classList.add("active");
-            rqt.classList.add("rct1");
+        void rqt.offsetWidth;
 
-            rqt.style.animationDirection = "reverse";
+        rqt.classList.add("active");
+        rqt.classList.add("rct1");
 
-            fakeRqt.animate(scaleAnim, scaleAnimTiming);
+        rqt.style.animationDirection = "reverse";
 
-            setTimeout(() => {
-                rqt2.animate(scaleAnimBack, scaleAnimTiming)
-            }, 500)
-        } else {
-            currentLeftRqtIndex++
-            currentMainRqtIndex++
+        fakeRqt.animate(scaleAnim, scaleAnimTiming);
 
-            fakeRqt.classList.remove("rectL")
-
-            console.log("///");
-            console.log(rqt);
-            console.log("///");
-
-            rqt.classList.remove("rct1");
-            rqt.classList.remove("active");
-            rqt.classList.remove("rectL");
-
-            rqt.classList.add("activeMain");
-            rqt.classList.add("mainRct");
-            rqt.classList.add("rctL");
-            rqt.classList.add("rctR");
-
-            console.log("///2412422424242");
-            console.log(currentMainRqt);
-            console.log("///");
-
-            currentMainRqt.classList.remove("activeMain");
-            currentMainRqt.classList.remove("rctL");
-            currentMainRqt.classList.remove("rctR");
-            currentMainRqt.classList.remove("mainRct");
-
-            currentMainRqt.classList.add("active2");
-            currentMainRqt.classList.add("rct2");
-            currentMainRqt.classList.add("rectR");
-
-            rqt2.classList.remove("rct2");
-            rqt2.classList.remove("active2");
-            rqt2.classList.remove("rectR");
-
-            console.log("///24124");
-            console.log(currentMainRqt);
-            console.log("///");
-
-            rqt.style.animationPlayState = "paused";
-            // currentMainRqt.style.animationPlayState = "paused";
-
-            y = false;
-            z = false;
-            q = false;
-            j = false;
-
-            onOffPass = false;
-
-            o++
-
-            redeclareSqr()
-        }
+        setTimeout(() => {
+            rqt2.animate(scaleAnimBack, scaleAnimTiming)
+        }, 500)
     }
 
     // ⚠️ Коли проводиш надто швидео одне входе в інше, пофіксю колись - М
 
     function delayedAnimStart() {
-        // clearTimeout(delayTimer);
+        clearTimeout(delayTimer);
         delayTimer = setTimeout(animStart, 500);
     }
 
     function delayedAnimBack() {
-        // clearTimeout(delayTimer); <- мб
-        delayTimer = setTimeout(animBack, 500);
+        clearTimeout(delayTimerD);
+        delayTimerD = setTimeout(animBack, 500);
     }
 
     // Правий прямокутник
@@ -338,31 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         fakeRqt2.classList.add("rectR");
         fakeRqt2.animate(scaleAnimBack, scaleAnimTiming);
-
-        // rqt2.classList.remove("active2");
-        // rqt2.classList.remove("rct2");
-        //
-        // void rqt2.offsetWidth;
-        //
-        // rqt2.classList.add("active2");
-        // rqt2.classList.add("rct2");
-        //
-        // rqt2.style.animationPlayState = "running";
-        // rqt2.style.animationDirection = "normal";
-        //
-        // ctrTxt.classList.remove("ctrActive");
-        // ctrTxt.classList.remove("centerText");
-        //
-        // void ctrTxt.offsetWidth;
-        //
-        // ctrTxt.classList.add("ctrActive");
-        // ctrTxt.classList.add("centerText");
-        //
-        // ctrTxt.style.animationPlayState = "running";
-        // ctrTxt.style.animationDirection = "normal";
-        //
-        //
-        // rqt.animate(scaleAnim, scaleAnimTiming);
     }
 
     function animBack2() {
@@ -371,79 +139,31 @@ document.addEventListener("DOMContentLoaded", function () {
         rqt.classList.remove("fakeAnim")
         rqt.classList.remove("fakeAnimActive")
 
-        if (onOffPass2 === false) {
-            rqt2.classList.remove("active2");
-            rqt2.classList.remove("rct2");
+        rqt2.classList.remove("active2");
+        rqt2.classList.remove("rct2");
 
-            void rqt2.offsetWidth;
+        void rqt2.offsetWidth;
 
-            rqt2.classList.add("active2");
-            rqt2.classList.add("rct2");
+        rqt2.classList.add("active2");
+        rqt2.classList.add("rct2");
 
-            rqt2.style.animationDirection = "reverse";
+        rqt2.style.animationDirection = "reverse";
 
-            fakeRqt2.animate(scaleAnim, scaleAnimTiming);
+        fakeRqt2.animate(scaleAnim, scaleAnimTiming);
 
-            setTimeout(() => {
-                rqt.animate(scaleAnimBack, scaleAnimTiming)
-            }, 500)
-        } else {
-            currentRightRqtIndex++
-            currentMainRqtIndex++
-
-            fakeRqt2.classList.remove("rectR")
-
-            console.log("///");
-            console.log(rqt2);
-            console.log("///");
-
-            rqt2.classList.remove("rct2");
-            rqt2.classList.remove("active2");
-            rqt2.classList.remove("rectR");
-
-            rqt2.classList.add("activeMain");
-            rqt2.classList.add("mainRct");
-            rqt2.classList.add("rctL");
-            rqt2.classList.add("rctR");
-
-            currentMainRqt.classList.remove("activeMain");
-            currentMainRqt.classList.remove("rctL");
-            currentMainRqt.classList.remove("rctR");
-            currentMainRqt.classList.remove("mainRct");
-
-            currentMainRqt.classList.add("active");
-            currentMainRqt.classList.add("rct1");
-            currentMainRqt.classList.add("rectL");
-
-            rqt.classList.remove("rct1");
-            rqt.classList.remove("active");
-            rqt.classList.remove("rectL");
-
-            console.log("///");
-            console.log(currentMainRqt);
-            console.log("///hfgfgf");
-
-            y2 = false;
-            z2 = false;
-            q2 = false;
-            j2 = false;
-
-            onOffPass2 = false;
-
-            o2++
-
-            redeclareSqrR()
-        }
+        setTimeout(() => {
+            rqt.animate(scaleAnimBack, scaleAnimTiming)
+        }, 500)
     }
 
     function delayedAnimStart2() {
-        // clearTimeout(delayTimer2);
+        clearTimeout(delayTimer2);
         delayTimer2 = setTimeout(animStart2, 500);
     }
 
     function delayedAnimBack2() {
-        // clearTimeout(delayTimer2);
-        delayTimer2 = setTimeout(animBack2, 500);
+        clearTimeout(delayTimer2D);
+        delayTimer2D = setTimeout(animBack2, 500);
     }
 
     function mainStartAnimL() {
@@ -478,13 +198,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function delayedMainStartAnimL() {
-        // clearTimeout(delayTimerMain);
+        clearTimeout(delayTimerMain);
         delayTimerMain = setTimeout(mainStartAnimL, 500);
     }
 
     function delayedMainBackAnimL() {
-        // clearTimeout(delayTimerMain);
-        delayTimerMain = setTimeout(mainBackAnimL, 500);
+        clearTimeout(delayTimerMainD);
+        delayTimerMainD = setTimeout(mainBackAnimL, 500);
     }
 
     function mainStartAnimR() {
@@ -518,13 +238,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function delayedMainStartAnimR() {
-        // clearTimeout(delayTimerMainR);
+        clearTimeout(delayTimerMainR);
         delayTimerMainR = setTimeout(mainStartAnimR, 500);
     }
 
     function delayedMainBackAnimR() {
-        // clearTimeout(delayTimerMainR);
-        delayTimerMainR = setTimeout(mainBackAnimR, 500);
+        clearTimeout(delayTimerMainRD);
+        delayTimerMainRD = setTimeout(mainBackAnimR, 500);
     }
 
     nextButton.addEventListener("mouseenter", delayedMainStartAnimL);
@@ -541,22 +261,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Анімація самої штуки - М
 
-// ⚠️ Рагульно зроблено але я хз як чинити - М
-
     function isScrolledIntoView() {
-        if (elemTop >= 0 && elemBottom <= window.innerHeight) {
-            isVisible = true;
-        }
+        let rect = currentImg.getBoundingClientRect();
+        const elemTop = rect.top;
+        const elemBottom = rect.bottom;
 
-        //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-        if (isVisible === true) {
-            setTimeout(() => {
-                currentImage.style.animationPlayState = "paused";
-            }, 10)
-        }
+        // Only completely visible elements return true:
+        // Partially visible elements return true:
+        let isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+        return isVisible;
     }
 
-// ⚠️ рагульно зроблено але я хз як чинити - М
-window.addEventListener("scroll", isScrolledIntoView)
+    setInterval(() => {
+        if (isScrolledIntoView() === true) {
+            if (onOff === true) {
+                currentImg.style.animationPlayState = "running";
+                ctrC.style.animationPlayState = "running"
+            }
+        }
+    }, 1500)
+    window.addEventListener("scroll", isScrolledIntoView)
 })
 ;

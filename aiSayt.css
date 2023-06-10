@@ -78,23 +78,47 @@ a {
 }
 
 h1 {
+    background-position-x: 150px;
+    background-repeat: no-repeat;
+    background-image: url("image/textbg.webp");
+    color: transparent;
     font-size: 700%;
-    color: white;
+    animation: buttonBg 100s infinite alternate;
     padding-top: 10%;
     font-family: 'Noto Sans Display', sans-serif;
-    text-align: center
+    text-align: center;
+    background-clip: text;
+    -webkit-background-clip: text;
 }
 
 .quoteText {
-    font-size: 200%;
     color: white;
+    font-size: 200%;
     padding-left: 30%;
     padding-right: 30%;
     font-family: 'PT Sans Caption', sans-serif;
-    text-align: center
+    text-align: center;
+    text-shadow:
+            -1px -1px 0 #000,
+            0   -1px 0 #000,
+            1px -1px 0 #000,
+            1px  0   0 #000,
+            1px  1px 0 #000,
+            0    1px 0 #000,
+            -1px  1px 0 #000,
+            -1px  0   0 #000;
 }
 
 .qot {
+    text-shadow:
+            -1px -1px 0 #000,
+            0   -1px 0 #000,
+            1px -1px 0 #000,
+            1px  0   0 #000,
+            1px  1px 0 #000,
+            0    1px 0 #000,
+            -1px  1px 0 #000,
+            -1px  0   0 #000;
     color: #ffffff;
     padding-left: 57%;
     font-size: 160%;
@@ -104,6 +128,9 @@ h1 {
 }
 
 .button1 {
+    background-repeat: no-repeat;
+    background-image: url("image/textbg.webp");
+    animation: buttonBgB 100s infinite alternate;
     z-index: 100;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
@@ -117,6 +144,7 @@ h1 {
     font-size: 250%;
     border: 1px solid #000000;
     box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
 }
 
 .button1:hover {
@@ -133,6 +161,22 @@ h1 {
     top: 4%;
     overflow: hidden;
     z-index: 4;
+}
+
+.galleryC {
+    all: initial;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 4%;
+    overflow: hidden;
+    z-index: 4;
+    animation-name: moovinLogo;
+    animation-duration: 0.5s;
+    animation-play-state: paused;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
 }
 
 .gallery-images {
@@ -175,7 +219,6 @@ h1 {
     margin-top: 1110px;
     background: none;
     border: none;
-    cursor: pointer;
 }
 
 .control-button:hover {
@@ -187,11 +230,13 @@ h1 {
 #prev-button {
     left: 620px;
     z-index: 6;
+    cursor: url("image/arrowCursorL.svg"), auto;
 }
 
 #next-button {
     left: 1218px;
     z-index: 5;
+    cursor: url("image/arrowCursorR.svg"), auto;
 }
 
 /* ChatGPT-шний код -М*/
@@ -251,10 +296,7 @@ h1 {
     margin-left: 120px;
 }
 
-#current-image {
-    animation-name: rainbow;
-    animation-duration: 10s;
-    animation-play-state: paused;
+.current-image {
     user-select: none;
 }
 
@@ -404,7 +446,7 @@ h1 {
     top: 33%;
     left: 20px;
     right: 20px;
-    font-family: Inter, serif;
+    font-family: "inter", sans-serif;
     font-size: 140%;
     color: #f1f1f1;
     text-align: match-parent;
@@ -518,7 +560,56 @@ h1 {
     position: absolute;
     top: 1920px;
     left: 1860px;
-    font-family: Verdana;
+    font-family: Verdana, serif;
     color: rgba(194, 235, 255);
     opacity: 3%;
+}
+
+@keyframes moovinLogo {
+    from {
+        top: 4%;
+    }
+    to {
+        transform: scale(150%);
+        top: 38%;
+    }
+}
+
+@keyframes onOffCtrTxt {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+#ctrC {
+    opacity: 0;
+    animation: onOffCtrTxt 1s forwards ease-out;
+    animation-play-state: paused;
+}
+
+@keyframes buttonBg {
+    from {
+        background-position-x: 150px;
+    }
+    to {
+        background-position-x: 400px;
+    }
+}
+
+.textBg {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+
+@keyframes buttonBgB {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position-x: -600px;
+    }
 }
