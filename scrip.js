@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let fakeRqt = document.getElementsByClassName("fakeRectL")[0];
     let fakeRqt2 = document.getElementsByClassName("fakeRectR")[0];
 
+    const descF = document.getElementsByClassName("containerDesc")[0];
+    const descFL = document.getElementsByClassName("containerDesc")[1];
+    const descFR = document.getElementsByClassName("containerDesc")[2];
+
     const currentImg = document.getElementsByClassName("galleryC")[0];
     const ctrC = document.getElementById("ctrC");
 
@@ -21,12 +25,25 @@ document.addEventListener("DOMContentLoaded", function () {
         {transform: "scale(1)"},
         {transform: "scale(0)"},
     ];
+    const opacityAnim = [
+        {opacity: 100},
+        {opacity: 0},
+    ];
     const scaleAnimBack = [
         {transform: "scale(0)"},
         {transform: "scale(1)"},
     ];
+    const opacityAnimBack = [
+        {opacity: 0},
+        {opacity: 100},
+    ];
     const scaleAnimTiming = {
         duration: 300,
+        iterations: 1,
+        fill: "forwards",
+    };
+    const scaleDescAnimTiming = {
+        duration: 100,
         iterations: 1,
         fill: "forwards",
     };
@@ -46,12 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Лівий прямокутник
 
     function animStart() {
-        cTxt1.classList.remove("cc")
+        cTxt1.classList.remove("cc");
 
-        rqt.classList.remove("fakeAnimL")
-        rqt.classList.remove("fakeAnimActive")
-        rqt2.classList.remove("fakeAnimR")
-        rqt2.classList.remove("fakeAnimActiveR")
+        rqt.classList.remove("fakeAnimL");
+        rqt.classList.remove("fakeAnimActive");
+        rqt2.classList.remove("fakeAnimR");
+        rqt2.classList.remove("fakeAnimActiveR");
 
         rqt.classList.remove("active");
         rqt.classList.remove("rct1");
@@ -68,6 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         fakeRqt.classList.add("rectL");
         fakeRqt.animate(scaleAnimBack, scaleAnimTiming);
+
+        descF.animate(opacityAnim, scaleDescAnimTiming);
     }
 
     function animBack() {
@@ -91,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setTimeout(() => {
             rqt2.animate(scaleAnimBack, scaleAnimTiming)
+            descF.animate(opacityAnimBack, scaleDescAnimTiming);
         }, 500)
     }
 
@@ -131,6 +151,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         fakeRqt2.classList.add("rectR");
         fakeRqt2.animate(scaleAnimBack, scaleAnimTiming);
+
+        descF.animate(opacityAnim, scaleDescAnimTiming);
     }
 
     function animBack2() {
@@ -153,6 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setTimeout(() => {
             rqt.animate(scaleAnimBack, scaleAnimTiming)
+            descF.animate(opacityAnimBack, scaleDescAnimTiming);
         }, 500)
     }
 

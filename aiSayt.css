@@ -613,3 +613,30 @@ h1 {
         background-position-x: -600px;
     }
 }
+
+.descF {
+    font-family: "Verdana", sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    margin-top: 260px;
+    margin-left: 90px;
+}
+
+.descImgF {
+    position: absolute;
+    margin-top: -10px;
+    margin-left: -68px;
+}
+
+.descF2 {
+    margin-top: 320px;
+}
+.descImgF2 {
+    margin-left: -57px;
+}
+
+.invis {
+    opacity: 0;
+}
