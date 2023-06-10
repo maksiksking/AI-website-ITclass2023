@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 onOff = false;
             }
         }
-    }, 1500)
+    }, 1200)
     window.addEventListener("scroll", isScrolledIntoView)
 })
 ;
