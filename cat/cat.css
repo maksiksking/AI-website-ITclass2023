@@ -133,7 +133,6 @@ body {
 	text-align: center;
 	color: #ffffff;
 	font-family: Verdana;
-	font-weight: none;
 	font-size: 26px;
 	border-radius: 8px;
 	padding: 13px;
@@ -154,7 +153,7 @@ body {
 .background2 {
 	position: absolute;
     width: 750px;
-    height: 546.2px;
+    height: 557px;
 	left: 1000px;
 	top: 170px;
     background: rgba(0, 0, 0, 0.37);
@@ -235,4 +234,14 @@ body {
     font-family: Verdana;
     color: rgba(194, 235, 255);
     opacity: 3%;
+}
+
+#rRect {
+    position: absolute;
+    width: 700px;
+    height: 510px;
+    left: 1025px;
+    top: 195px;
+    background: rgba(0, 0, 0, 0.37);
+    border-radius: 5px;
 }
