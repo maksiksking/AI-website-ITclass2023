@@ -276,7 +276,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (isScrolledIntoView() === true) {
             if (onOff === true) {
                 currentImg.style.animationPlayState = "running";
-                ctrC.style.animationPlayState = "running"
+                ctrC.style.animationPlayState = "running";
+                onOff = false;
             }
         }
     }, 1500)
