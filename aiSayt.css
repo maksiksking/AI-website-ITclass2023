@@ -622,6 +622,7 @@ h1 {
     position: absolute;
     margin-top: 260px;
     margin-left: 90px;
+    user-select: none;
 }
 
 .descImgF {

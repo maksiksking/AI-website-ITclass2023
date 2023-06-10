@@ -270,17 +270,17 @@ document.addEventListener("DOMContentLoaded", function () {
         delayTimerMainRD = setTimeout(mainBackAnimR, 500);
     }
 
-    nextButton.addEventListener("mouseenter", delayedMainStartAnimL);
-    nextButton.addEventListener("mouseleave", delayedMainBackAnimL);
+    prevButton.addEventListener("mouseenter", delayedMainStartAnimL);
+    prevButton.addEventListener("mouseleave", delayedMainBackAnimL);
 
-    prevButton.addEventListener("mouseenter", delayedMainStartAnimR);
-    prevButton.addEventListener("mouseleave", delayedMainBackAnimR);
+    prevButton.addEventListener("mouseleave", delayedAnimBack);
+    prevButton.addEventListener("mouseenter", delayedAnimStart);
 
-    nextButton.addEventListener("mouseleave", delayedAnimBack);
-    nextButton.addEventListener("mouseenter", delayedAnimStart);
+    nextButton.addEventListener("mouseenter", delayedMainStartAnimR);
+    nextButton.addEventListener("mouseleave", delayedMainBackAnimR);
 
-    prevButton.addEventListener("mouseleave", delayedAnimBack2);
-    prevButton.addEventListener("mouseenter", delayedAnimStart2);
+    nextButton.addEventListener("mouseleave", delayedAnimBack2);
+    nextButton.addEventListener("mouseenter", delayedAnimStart2);
 
 // Анімація самої штуки - М
 
