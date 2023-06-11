@@ -661,6 +661,7 @@ h1 {
     color: white;
     margin-top: 74%;
     z-index: 1002;
+    display: none;
 }
 
 @media screen and (max-width: 985px) {
@@ -684,8 +685,14 @@ h1 {
     .scrTurn {
         display: initial;
     }
+        .scrTxt {
+        display: initial;
+    }
     @media (orientation: landscape) {
         .scrTurn {
+            display: none;
+        }
+                .scrTxt {
             display: none;
         }
     }
