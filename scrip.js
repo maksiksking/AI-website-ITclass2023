@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let fakeRqt2 = document.getElementsByClassName("fakeRectR")[0];
 
     const descF = document.getElementsByClassName("containerDesc")[0];
-    const descFL = document.getElementsByClassName("containerDesc")[1];
-    const descFR = document.getElementsByClassName("containerDesc")[2];
 
     const currentImg = document.getElementsByClassName("galleryC")[0];
     const ctrC = document.getElementById("ctrC");
@@ -87,6 +85,10 @@ document.addEventListener("DOMContentLoaded", function () {
         fakeRqt.animate(scaleAnimBack, scaleAnimTiming);
 
         descF.animate(opacityAnim, scaleDescAnimTiming);
+
+        // clearTimeout(delayTimer2)
+        // clearTimeout(delayTimer2D)
+
     }
 
     function animBack() {
@@ -114,15 +116,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 500)
     }
 
-    // ⚠️ Коли проводиш надто швидео одне входе в інше, пофіксю колись - М
+    // ⚠️ Коли проводиш надто швидео одне входе в інше, пофіксю щяс - М
 
     function delayedAnimStart() {
-        clearTimeout(delayTimer);
+        clearTimeout(delayTimer)
         delayTimer = setTimeout(animStart, 500);
     }
 
     function delayedAnimBack() {
-        clearTimeout(delayTimerD);
+        clearTimeout(delayTimerD)
         delayTimerD = setTimeout(animBack, 500);
     }
 
@@ -153,6 +155,11 @@ document.addEventListener("DOMContentLoaded", function () {
         fakeRqt2.animate(scaleAnimBack, scaleAnimTiming);
 
         descF.animate(opacityAnim, scaleDescAnimTiming);
+
+        // allowedToRun = false;
+
+        // clearTimeout(delayTimer)
+        // clearTimeout(delayTimerD)
     }
 
     function animBack2() {
@@ -177,15 +184,15 @@ document.addEventListener("DOMContentLoaded", function () {
             rqt.animate(scaleAnimBack, scaleAnimTiming)
             descF.animate(opacityAnimBack, scaleDescAnimTiming);
         }, 500)
+
+        // allowedToRun = false;
     }
 
     function delayedAnimStart2() {
-        clearTimeout(delayTimer2);
         delayTimer2 = setTimeout(animStart2, 500);
     }
 
     function delayedAnimBack2() {
-        clearTimeout(delayTimer2D);
         delayTimer2D = setTimeout(animBack2, 500);
     }
 

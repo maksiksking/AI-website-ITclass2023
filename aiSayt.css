@@ -641,3 +641,52 @@ h1 {
 .invis {
     opacity: 0;
 }
+
+.scrTurn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 400vw;
+    height: 400vh;
+    opacity: 95%;
+    background-color: #4A4A4A;
+    text-align: center;
+    font-family: Verdana, serif;
+    z-index: 1001;
+    display: none;
+}
+
+.scrTxt {
+    font-size: 100px;
+    color: white;
+    margin-top: 74%;
+    z-index: 1002;
+}
+
+@media screen and (max-width: 985px) {
+    .quoteText {
+        width: 140%;
+        margin-left: 30%;
+        font-size: 250%;
+    }
+    h1 {
+        opacity: 0;
+    }
+    .button1 {
+        transform: scale(400%);
+        margin-top: 50%;
+        margin-left: 65%;
+        font-size: 100%;
+    }
+    .footer {
+        width: 250%;
+    }
+    .scrTurn {
+        display: initial;
+    }
+    @media (orientation: landscape) {
+        .scrTurn {
+            display: none;
+        }
+    }
+}
