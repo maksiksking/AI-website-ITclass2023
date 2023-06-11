@@ -685,14 +685,14 @@ h1 {
     .scrTurn {
         display: initial;
     }
-        .scrTxt {
+    .scrTxt {
         display: initial;
     }
     @media (orientation: landscape) {
         .scrTurn {
             display: none;
         }
-                .scrTxt {
+        .scrTxt {
             display: none;
         }
     }
