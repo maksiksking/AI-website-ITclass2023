@@ -342,7 +342,6 @@
                         замінюйте, додавайте або видаляйте будь-яке мовлення
                     </div>
                 </div>
-
             </td>
 
             <td class="tds">
@@ -355,28 +354,58 @@
                         профілактики
                     </div>
                 </div>
-
             </td>
         </tr>
     </table>
 </div>
 <div class="background2">
+    <p id="tutorialTxt">Наведи на будь-що!</p>
+    <script>
+        txt = document.getElementById("tutorialTxt");
+        tb = document.getElementsByClassName("tablee")[0];
 
+        const woke = [
+            {opacity: "100"},
+            {opacity: "0"},
+        ];
+
+        const unWoke = [
+            {opacity: "0"},
+            {opacity: "100"},
+        ];
+
+        const wokeTiming = {
+            duration: 150,
+            iterations: 1,
+            fill: "forwards",
+        }
+        function run1() {
+            txt.animate(woke, wokeTiming);
+        }
+
+        function run2() {
+            txt.animate(unWoke, wokeTiming);
+        }
+
+        tb.addEventListener("mouseenter", run1);
+        tb.addEventListener("mouseleave", run2);
+    </script>
 </div>
 
 <footer class="footer"></footer>
 <a href="../Povistka/povistka.html" target="_blank"><p class="povistka">???</p></a>
 
-<ul class="hto">
-    <li class="comanda">Команда</li>
-    <li class="zvazok">Зв'язок</li>
-    <li class="maks">Maksiks</li>
-    <li class="pochta">maksiksking1@gmail.com</li>
-    <li class="concretno">Vitalik</li>
-    <li class="concretno">vlyd</li>
-    <li class="concretno">Blissok</li>
-    <li class="concretno">Umka</li>
+<ul id="auLst">Автори:
+    <li>Maksiks</li>
+    <li>Vitalik</li>
+    <li>Vlyd</li>
+    <li>Umka</li>
+    <li>Blissok</li>
+    <p id="gg">Зроблено як проект на інформатику та робота на конкурс. Дякую за використання!</p>
 </ul>
+<button onclick="scrollToppa()" id="iconTop">
+    <img src="../image/favicon.svg" alt="іконка">
+</button>
 
 <div id="rRect"></div>
 </body>

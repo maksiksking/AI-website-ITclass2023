@@ -266,36 +266,6 @@ h1 {
     background-color: white;
 }
 
-.zvazok {
-    overflow: hidden;
-    font-size: 120%;
-    margin-left: 160px;
-}
-
-.comanda {
-    overflow: hidden;
-    font-size: 120%;
-    float: left;
-    padding-right: 2.5%;
-}
-
-.hto {
-    position: absolute;
-    top: 1830px;
-    padding-bottom: 6px;
-    padding-left: 4%;
-    color: #ffffff;
-    font-family: 'Verdana', serif;
-}
-
-.maks {
-    float: left;
-}
-
-.pochta {
-    margin-left: 120px;
-}
-
 .current-image {
     user-select: none;
 }
@@ -563,6 +533,7 @@ h1 {
     font-family: Verdana, serif;
     color: rgba(194, 235, 255);
     opacity: 3%;
+    cursor: help;
 }
 
 @keyframes moovinLogo {
@@ -696,4 +667,56 @@ h1 {
             display: none;
         }
     }
+}
+
+#auLst {
+    padding-left: 2%;
+    font-size: 1.5vw;
+    color: white;
+    font-family: Verdana, serif;
+    position: absolute;
+    top: 1850px;
+}
+
+#ggLst {
+    list-style: none;
+    text-align: right;
+    margin-left: 78%;
+    font-size: 1vw;
+    color: white;
+    font-family: Verdana, serif;
+    position: absolute;
+    top: 1832px;
+}
+
+#ggLst li{
+    font-family: Verdana, serif;
+    font-size: 0.65vw;
+    height: 50%;
+}
+
+
+#auLst li{
+    height: 50%;
+    margin-left: 20px;
+    font-size: 1vw;
+    color: #ffffff;
+    font-family: Forte, serif;
+    display: inline;
+}
+
+#gg {
+    padding-top: 10px;
+    font-size: 1.05vw;
+}
+
+#iconTop {
+    transform: scale(0.8);
+    position: absolute;
+    top: 1825px;
+    margin-left: 90%;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: none;
 }

@@ -1,31 +1,31 @@
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 ::-webkit-scrollbar {
-	width: 10px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-	background: #f1f1f1;
+    background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #888;
+    background: #888;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #555;
+    background: #555;
 }
 
 a:link {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 a {
-	display: block;
-	padding: 10px;
+    display: block;
+    padding: 10px;
 }
 
 body {
@@ -36,38 +36,38 @@ body {
 }
 
 .categories {
-	z-index: 1000;
-	color: #ffffff;
-	position: fixed;
-	margin-top: 1.2%;
+    z-index: 1000;
+    color: #ffffff;
+    position: fixed;
+    margin-top: 1.2%;
     font-family: 'Verdana', serif;
-	left: 1%;
-	font-size: 120%;
+    left: 1%;
+    font-size: 120%;
 }
 
 .Menu1 {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
 }
 
 .head1 {
-	float: left;
+    float: left;
 }
 
 .sqr {
-	z-index: 1000;
-	position: fixed;
-	margin-top: 3.5%;
-	margin-right: 0;
-	margin-left: 0;
-	width: 100%;
-	height: 6px;
-	background-color: white;
+    z-index: 1000;
+    position: fixed;
+    margin-top: 3.5%;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: white;
 }
 
-.background123{
+.background123 {
     position: absolute;
     width: auto;
     height: auto;
@@ -119,63 +119,65 @@ body {
 }
 
 .tablee {
-	position: relative;
-	text-align: center;
-	color: #ffffff;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
     font-family: Verdana, serif;
-	font-size: 26px;
-	border-radius: 8px;
-	padding: 13px;
+    font-size: 26px;
+    border-radius: 8px;
+    padding: 13px;
 
 }
 
 .tds {
-	border: 5px solid rgba(0, 0, 0, 0);;
-	background: rgba(0, 0, 0, 0.37);
-	height: 85px;
+    border: 5px solid rgba(0, 0, 0, 0);;
+    background: rgba(0, 0, 0, 0.37);
+    height: 85px;
 }
 
-.column1, .column2, .column3, .column4, .column5{
-	width: 160px;
-	padding: 5px;
+.column1, .column2, .column3, .column4, .column5 {
+    width: 160px;
+    padding: 5px;
 }
 
 .background2 {
-	position: absolute;
+    position: absolute;
     width: 750px;
     height: 557px;
-	left: 1000px;
-	top: 170px;
+    left: 1000px;
+    top: 170px;
     background: rgba(0, 0, 0, 0.37);
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container1 {
-		position: relative;
-	}
-	
-.textxx {
-		color: #ffffff
+    position: relative;
 }
 
+.textxx {
+    color: #ffffff
+}
 
-.info{
-	color: #ffffff;
-	padding: 20px;
+.info {
+    color: #ffffff;
+    padding: 20px;
 }
 
 .images {
-	position: absolute;
-	top: 150px; 
-	left: 960px; 
-	opacity: 0; 
-	transition: opacity 0.4s ease;
-	z-index: 100;
-	width: 700px;
+    position: absolute;
+    top: 150px;
+    left: 960px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 100;
+    width: 700px;
 }
-	
-.container:hover + .images   {
-	opacity: 1; 
+
+.container:hover + .images {
+    opacity: 1;
 }
 
 .footer {
@@ -187,36 +189,6 @@ body {
     background-color: white;
 }
 
-.zvazok {
-    overflow: hidden;
-    font-size: 120%;
-    margin-left: 160px;
-}
-
-.comanda {
-    overflow: hidden;
-    font-size: 120%;
-    float: left;
-    padding-right: 2.5%;
-}
-
-.hto {
-    position: absolute;
-    top: 800px;
-    padding-bottom: 6px;
-    padding-left: 4%;
-    color: #ffffff;
-    font-family: 'Verdana', serif;
-}
-
-.maks {
-    float: left;
-}
-
-.pochta {
-    margin-left: 120px;
-}
-
 .povistka {
     position: absolute;
     top: 900px;
@@ -224,6 +196,13 @@ body {
     font-family: Verdana, serif;
     color: rgba(194, 235, 255);
     opacity: 3%;
+}
+
+#tutorialTxt {
+    font-size: 5vh;
+    font-family: Verdana, serif;
+    color: white;
+    z-index: 4;
 }
 
 #rRect {
@@ -236,8 +215,62 @@ body {
     border-radius: 5px;
 }
 
+#auLst {
+    padding-left: 2%;
+    font-size: 1.5vw;
+    color: white;
+    font-family: Verdana, serif;
+    position: absolute;
+    top: 820px;
+}
+
+#ggLst {
+    list-style: none;
+    text-align: right;
+    margin-left: 78%;
+    font-size: 1vw;
+    color: white;
+    font-family: Verdana, serif;
+    position: absolute;
+    top: 802px;
+}
+
+#ggLst li{
+    font-family: Verdana, serif;
+    font-size: 0.65vw;
+    height: 50%;
+}
+
+
+#auLst li{
+    height: 50%;
+    margin-left: 20px;
+    font-size: 1vw;
+    color: #ffffff;
+    font-family: Forte, serif;
+    display: inline;
+}
+
+#gg {
+    padding-top: 10px;
+    font-size: 1.05vw;
+}
+
+#iconTop {
+    transform: scale(0.8);
+    position: absolute;
+    top: 800px;
+    margin-left: 90%;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
 @media screen and (max-width: 985px) {
     .footer {
-        width: 250%;
+        width: 100vw;
+    }
+    #tutorialTxt {
+        display: none;
     }
 }

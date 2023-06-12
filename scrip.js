@@ -58,65 +58,73 @@ document.addEventListener("DOMContentLoaded", function () {
     let delayTimerMainD;
     let delayTimerMainRD;
 
+    let allowAnim1 = true;
+
     // Лівий прямокутник
 
     function animStart() {
-        cTxt1.classList.remove("cc");
+        if (allowAnim1 === true) {
+            cTxt1.classList.remove("cc");
 
-        rqt.classList.remove("fakeAnimL");
-        rqt.classList.remove("fakeAnimActive");
-        rqt2.classList.remove("fakeAnimR");
-        rqt2.classList.remove("fakeAnimActiveR");
+            rqt.classList.remove("fakeAnimL");
+            rqt.classList.remove("fakeAnimActive");
+            rqt2.classList.remove("fakeAnimR");
+            rqt2.classList.remove("fakeAnimActiveR");
 
-        rqt.classList.remove("active");
-        rqt.classList.remove("rct1");
+            rqt.classList.remove("active");
+            rqt.classList.remove("rct1");
 
-        void rqt.offsetWidth;
+            void rqt.offsetWidth;
 
-        rqt.classList.add("active");
-        rqt.classList.add("rct1");
+            rqt.classList.add("active");
+            rqt.classList.add("rct1");
 
-        rqt.style.animationPlayState = "running";
-        rqt.style.animationDirection = "normal";
+            rqt.style.animationPlayState = "running";
+            rqt.style.animationDirection = "normal";
 
-        rqt2.animate(scaleAnim, scaleAnimTiming);
+            rqt2.animate(scaleAnim, scaleAnimTiming);
 
-        fakeRqt.classList.add("rectL");
-        fakeRqt.animate(scaleAnimBack, scaleAnimTiming);
+            fakeRqt.classList.add("rectL");
+            fakeRqt.animate(scaleAnimBack, scaleAnimTiming);
 
-        descF.animate(opacityAnim, scaleDescAnimTiming);
-
-        // clearTimeout(delayTimer2)
-        // clearTimeout(delayTimer2D)
-
+            descF.animate(opacityAnim, scaleDescAnimTiming);
+        } else {
+            console.log("puff1")
+        }
     }
 
     function animBack() {
-        rqt.classList.remove("fakeAnimL")
-        rqt.classList.remove("fakeAnimActive")
-        rqt2.classList.remove("fakeAnimR")
-        rqt2.classList.remove("fakeAnimActiveR")
+        if (allowAnim1 === true) {
+            rqt.classList.remove("fakeAnimL")
+            rqt.classList.remove("fakeAnimActive")
+            rqt2.classList.remove("fakeAnimR")
+            rqt2.classList.remove("fakeAnimActiveR")
 
 
-        rqt.classList.remove("active");
-        rqt.classList.remove("rct1");
+            rqt.classList.remove("active");
+            rqt.classList.remove("rct1");
 
-        void rqt.offsetWidth;
+            void rqt.offsetWidth;
 
-        rqt.classList.add("active");
-        rqt.classList.add("rct1");
+            rqt.classList.add("active");
+            rqt.classList.add("rct1");
 
-        rqt.style.animationDirection = "reverse";
+            rqt.style.animationDirection = "reverse";
 
-        fakeRqt.animate(scaleAnim, scaleAnimTiming);
+            fakeRqt.animate(scaleAnim, scaleAnimTiming);
 
-        setTimeout(() => {
-            rqt2.animate(scaleAnimBack, scaleAnimTiming)
-            descF.animate(opacityAnimBack, scaleDescAnimTiming);
-        }, 500)
+            allowAnim1 = false;
+
+            setTimeout(() => {
+                allowAnim1 = true;
+            }, 750)
+
+            setTimeout(() => {
+                rqt2.animate(scaleAnimBack, scaleAnimTiming);
+                descF.animate(opacityAnimBack, scaleDescAnimTiming);
+            }, 500)
+        }
     }
-
-    // ⚠️ Коли проводиш надто швидео одне входе в інше, пофіксю щяс - М
 
     function delayedAnimStart() {
         clearTimeout(delayTimer)
@@ -131,61 +139,66 @@ document.addEventListener("DOMContentLoaded", function () {
     // Правий прямокутник
 
     function animStart2() {
-        cTxt2.classList.remove("cc")
+        if (allowAnim1 === true) {
+            cTxt2.classList.remove("cc")
 
-        rqt2.classList.remove("fakeAnimR")
-        rqt2.classList.remove("fakeAnimActiveR")
-        rqt.classList.remove("fakeAnim")
-        rqt.classList.remove("fakeAnimActive")
+            rqt2.classList.remove("fakeAnimR")
+            rqt2.classList.remove("fakeAnimActiveR")
+            rqt.classList.remove("fakeAnim")
+            rqt.classList.remove("fakeAnimActive")
 
-        rqt2.classList.remove("active2");
-        rqt2.classList.remove("rct2");
+            rqt2.classList.remove("active2");
+            rqt2.classList.remove("rct2");
 
-        void rqt2.offsetWidth;
+            void rqt2.offsetWidth;
 
-        rqt2.classList.add("active2");
-        rqt2.classList.add("rct2");
+            rqt2.classList.add("active2");
+            rqt2.classList.add("rct2");
 
-        rqt2.style.animationPlayState = "running";
-        rqt2.style.animationDirection = "normal";
+            rqt2.style.animationPlayState = "running";
+            rqt2.style.animationDirection = "normal";
 
-        rqt.animate(scaleAnim, scaleAnimTiming);
+            rqt.animate(scaleAnim, scaleAnimTiming);
 
-        fakeRqt2.classList.add("rectR");
-        fakeRqt2.animate(scaleAnimBack, scaleAnimTiming);
+            fakeRqt2.classList.add("rectR");
+            fakeRqt2.animate(scaleAnimBack, scaleAnimTiming);
 
-        descF.animate(opacityAnim, scaleDescAnimTiming);
-
-        // allowedToRun = false;
-
-        // clearTimeout(delayTimer)
-        // clearTimeout(delayTimerD)
+            descF.animate(opacityAnim, scaleDescAnimTiming);
+        } else {
+            console.log("puff2")
+        }
     }
 
     function animBack2() {
-        rqt2.classList.remove("fakeAnimR")
-        rqt2.classList.remove("fakeAnimActiveR")
-        rqt.classList.remove("fakeAnim")
-        rqt.classList.remove("fakeAnimActive")
+        if (allowAnim1 === true) {
+            rqt2.classList.remove("fakeAnimR")
+            rqt2.classList.remove("fakeAnimActiveR")
+            rqt.classList.remove("fakeAnim")
+            rqt.classList.remove("fakeAnimActive")
 
-        rqt2.classList.remove("active2");
-        rqt2.classList.remove("rct2");
+            rqt2.classList.remove("active2");
+            rqt2.classList.remove("rct2");
 
-        void rqt2.offsetWidth;
+            void rqt2.offsetWidth;
 
-        rqt2.classList.add("active2");
-        rqt2.classList.add("rct2");
+            rqt2.classList.add("active2");
+            rqt2.classList.add("rct2");
 
-        rqt2.style.animationDirection = "reverse";
+            rqt2.style.animationDirection = "reverse";
 
-        fakeRqt2.animate(scaleAnim, scaleAnimTiming);
+            fakeRqt2.animate(scaleAnim, scaleAnimTiming);
 
-        setTimeout(() => {
-            rqt.animate(scaleAnimBack, scaleAnimTiming)
-            descF.animate(opacityAnimBack, scaleDescAnimTiming);
-        }, 500)
+            allowAnim1 = false;
 
-        // allowedToRun = false;
+            setTimeout(() => {
+                allowAnim1 = true;
+            }, 750)
+
+            setTimeout(() => {
+                rqt.animate(scaleAnimBack, scaleAnimTiming)
+                descF.animate(opacityAnimBack, scaleDescAnimTiming);
+            }, 500)
+        }
     }
 
     function delayedAnimStart2() {
@@ -197,34 +210,38 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function mainStartAnimL() {
-        currentMainRqt.classList.remove("activeMain");
-        currentMainRqt.classList.remove("rctL");
+        if (allowAnim1 === true) {
+            currentMainRqt.classList.remove("activeMain");
+            currentMainRqt.classList.remove("rctL");
 
-        void currentMainRqt.offsetWidth;
+            void currentMainRqt.offsetWidth;
 
-        currentMainRqt.classList.add("activeMain");
-        currentMainRqt.classList.add("rctL");
+            currentMainRqt.classList.add("activeMain");
+            currentMainRqt.classList.add("rctL");
 
-        currentMainRqt.classList.remove("rctR");
-        currentMainRqt.classList.add("rctL");
+            currentMainRqt.classList.remove("rctR");
+            currentMainRqt.classList.add("rctL");
 
-        currentMainRqt.style.animationPlayState = "running";
-        currentMainRqt.style.animationDirection = "normal";
+            currentMainRqt.style.animationPlayState = "running";
+            currentMainRqt.style.animationDirection = "normal";
+        }
     }
 
     function mainBackAnimL() {
-        currentMainRqt.classList.remove("activeMain");
-        currentMainRqt.classList.remove("rctL");
+        if (allowAnim1 === true) {
+            currentMainRqt.classList.remove("activeMain");
+            currentMainRqt.classList.remove("rctL");
 
-        void currentMainRqt.offsetWidth;
+            void currentMainRqt.offsetWidth;
 
-        currentMainRqt.classList.add("activeMain");
-        currentMainRqt.classList.add("rctL");
+            currentMainRqt.classList.add("activeMain");
+            currentMainRqt.classList.add("rctL");
 
-        currentMainRqt.classList.remove("rctR");
-        currentMainRqt.classList.add("rctL");
+            currentMainRqt.classList.remove("rctR");
+            currentMainRqt.classList.add("rctL");
 
-        currentMainRqt.style.animationDirection = "reverse";
+            currentMainRqt.style.animationDirection = "reverse";
+        }
     }
 
     function delayedMainStartAnimL() {
@@ -238,33 +255,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function mainStartAnimR() {
-        currentMainRqt.classList.remove("activeMain");
-        currentMainRqt.classList.remove("rctR");
+        if (allowAnim1 === true) {
+            currentMainRqt.classList.remove("activeMain");
+            currentMainRqt.classList.remove("rctR");
 
-        void currentMainRqt.offsetWidth;
+            void currentMainRqt.offsetWidth;
 
-        currentMainRqt.classList.add("activeMain");
-        currentMainRqt.classList.add("rctR");
+            currentMainRqt.classList.add("activeMain");
+            currentMainRqt.classList.add("rctR");
 
-        currentMainRqt.classList.remove("rctL");
-        currentMainRqt.classList.add("rctR");
-        currentMainRqt.style.animationPlayState = "running";
-        currentMainRqt.style.animationDirection = "normal";
+            currentMainRqt.classList.remove("rctL");
+            currentMainRqt.classList.add("rctR");
+            currentMainRqt.style.animationPlayState = "running";
+            currentMainRqt.style.animationDirection = "normal";
+        }
     }
 
     function mainBackAnimR() {
-        currentMainRqt.classList.remove("activeMain");
-        currentMainRqt.classList.remove("rctR");
+        if (allowAnim1 === true) {
+            currentMainRqt.classList.remove("activeMain");
+            currentMainRqt.classList.remove("rctR");
 
-        void currentMainRqt.offsetWidth;
+            void currentMainRqt.offsetWidth;
 
-        currentMainRqt.classList.add("activeMain");
-        currentMainRqt.classList.add("rctR");
+            currentMainRqt.classList.add("activeMain");
+            currentMainRqt.classList.add("rctR");
 
-        currentMainRqt.classList.remove("rctL");
-        currentMainRqt.classList.add("rctR");
+            currentMainRqt.classList.remove("rctL");
+            currentMainRqt.classList.add("rctR");
 
-        currentMainRqt.style.animationDirection = "reverse";
+            currentMainRqt.style.animationDirection = "reverse";
+        }
     }
 
     function delayedMainStartAnimR() {
@@ -296,8 +317,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const elemTop = rect.top;
         const elemBottom = rect.bottom;
 
-        // Only completely visible elements return true:
-        // Partially visible elements return true:
         let isVisible = elemTop < window.innerHeight && elemBottom >= 0;
         return isVisible;
     }

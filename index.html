@@ -73,11 +73,6 @@
     <p class="centerText ctrActive ctrText"><strong>Night Cafe</strong> - один з найпопулярніших генераторів зображень на ШІ, використовує різні моделі як Dall-E 2, Stable Diffusion та інші для створення зображень лише за допомогою текового запиту.</p>
 </div>
 
-<div class="rqtId"></div>
-<div class="rqtId"></div>
-<div class="rqtId"></div>
-<div class="rqtId"></div>
-
 <div class="fakeRectL mobileV1">
     <p class="ctrText cc txt"><strong>Більше у категоріях!</strong></p>
 </div>
@@ -93,11 +88,6 @@
     <p class="centerText ctrActive ctrText"><strong>Github Copilot</strong> - ваш помічник у написанні коду вбудуваний у ваш IDE, створений розробниками GitHub. Може додавати код за потреби розуміючи коментарі які ви пишете і орієнтуючись, що саме ви хочете додати за ними.</p>
 </div>
 
-<div class="rqtIdR"></div>
-<div class="rqtIdR"></div>
-<div class="rqtIdR"></div>
-<div class="rqtIdR"></div>
-
 <div class="fakeRectR mobileV2">
     <p class="ctrText cc txt"><strong>Більше у категоріях!</strong></p>
 </div>
@@ -111,16 +101,25 @@
 <footer class="footer"></footer>
 <a href="Povistka/povistka.html" class="povistka"><p>???</p></a>
 
-<ul class="hto">
-    <li class="comanda">Команда</li>
-    <li class="zvazok">Зв'язок</li>
-    <li class="maks">Maksiks</li>
-    <li class="pochta">maksiksking1@gmail.com</li>
-    <li class="concretno">Vitalik</li>
-    <li class="concretno">vlyd</li>
-    <li class="concretno">Blissok</li>
-    <li class="concretno">Umka</li>
+<ul id="auLst">Автори:
+    <li>Maksiks</li>
+    <li>Vitalik</li>
+    <li>Vlyd</li>
+    <li>Umka</li>
+    <li>Blissok</li>
+    <p id="gg">Зроблено як проект на інформатику та робота на конкурс. Дякую за використання!</p>
 </ul>
+<button onclick="scrollToppa()" id="iconTop">
+    <img src="image/favicon.svg" alt="іконка">
+    <script>
+        icTp = document.getElementById("IconTop")
+
+        function scrollToppa() {
+            document.body.scrollTop = 0;
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+    </script>
+</button>
 
 </body>
 </html>
